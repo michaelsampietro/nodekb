@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 #{title}
+    ul
+        each todo, i in todos.data
+            if todo.completed
+                li.green= todo.title
+            else
+                li.red= todo.title
